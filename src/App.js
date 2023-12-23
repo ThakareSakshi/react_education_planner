@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+import AddPlanner from './components/AddPlanner';
+import PlannerList from './components/PlannerList';
 
 function App() {
+  const [plannerList,setplannerList]=useState([]);
+
+  const addToList=(usertext,hours)=>{
+    console.log(usertext,hours);
+    let newItem={usertext,hours}
+    setplannerList([...plannerList,newItem])
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddPlanner addToList={addToList}/>
+      <PlannerList taskList={plannerList}/>
+      
     </div>
   );
 }
