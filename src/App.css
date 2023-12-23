@@ -1,12 +1,41 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  color: #6893e8;
 }
 
+input{
+  padding:9px;
+  border-radius: 5px;
+  margin:10px;
+  outline: none;
+  border:.5px solid grey;
+}
+button{
+  padding:10px 20px;
+  border-radius: 5px;
+  color:white;
+  background-color: #6b5ef5;
+  border: none;
+  outline: none;
+}
+.listitem{
+  padding:10px;
+  display: flex;
+  gap:15px;
+ justify-content: center;
+ align-items: center;
+ box-shadow: 0 0 8px grey;
+ width: fit-content;
+ border-radius: 5px;
+ margin:.5rem;
+}
+.plannerlist{
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

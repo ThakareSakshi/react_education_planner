@@ -3,7 +3,7 @@ import PlannerItem from './PlannerItem'
 
 const PlannerList = ({taskList}) => {
   return (
-    <div>
+    <div className='plannerlist'>
       {
         taskList.map((item,index)=> (
             <PlannerItem key={index} listitem={item}/>
